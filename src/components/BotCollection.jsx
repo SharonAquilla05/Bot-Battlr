@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'; // Import necessary hooks
 
-function Botpage() {
+function BotCollection() {
   const [bots, setBots] = useState([]); // Array to store bot data
   const [isLoading, setIsLoading] = useState(true); // Track loading state
   const [error, setError] = useState(null); // Store any errors
@@ -8,7 +8,7 @@ function Botpage() {
   useEffect(() => {
     const fetchBots = async () => { // Use async/await for cleaner syntax
       try {
-        const response = await fetch('http://localhost:3000/bots'); // Fetch data
+        const response = await fetch("http://localhost:3000/bots"); // Fetch data
         if (!response.ok) { // Check for HTTP errors
           throw new Error('Network response was not ok');
         }
@@ -53,4 +53,4 @@ function Botpage() {
   );
 }
 
-export default Botpage;
+export default BotCollection;

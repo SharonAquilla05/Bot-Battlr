@@ -1,10 +1,12 @@
 import React from 'react'
-import Botpage from './components/Botpage'
+import BotCollection from './components/BotCollection'
+import YourBotArmy from './components/YourBotArmy'
 
 function App() {
   return (
     <div>
-      <Botpage/>
+      <BotCollection/>
+      <YourBotArmy/>
     </div>
   )
 }
