@@ -1,42 +1,27 @@
-import React from 'react'
-import "./button.css"
-function YourBotArmy({botArray,setBotArray}) {
-    
-function handleRemoveFromList(botid){
-const remove = botArray.filter(bot =>bot.id !==botid)
-setBotArray(remove)
-alert ('Until we meet again ')
-}    
-function removeCompletely(botsid){
-fetch( ` https://botis.onrender.com/bots${botsid}`,{
-    method: 'DELETE'
-})
-.then(()=>{
-  const destroy = botArray.filter(bot =>bot.id !==botsid)  
-  setBotArray(destroy)
-  alert(`Am  out goodbye soliders  🏳️`)
-})
+import React from "react";
 
-    
-}    
-const display = botArray.map((input)=>(
-   <div key={input.id}>
-   <p>Name:{input.name}</p>
-   <p>Health:{input.health}</p>
-   <p>Damage:{input.damage}</p>
-   <p>Armor:{input.armor}</p>
-   <p>Bot Class:{input.bot_class}</p>
-    <img src={input.avatar_url} alt="try again" />
-    <button onClick={()=>handleRemoveFromList(input.id)}>remove army from list</button>
-    <button onClick={()=>removeCompletely(input.id)}id='red'>x</button>
-    </div>
-))
+function YourBotArmy({ bots, onReleaseBot, onDischargeBot }) {
   return (
     <div>
-        <h3>Here is my Ultimate Team</h3>
-        {display}
+      <h2>Your Bot Army</h2>
+      <ul>
+        {bots.map((bot) => (
+          <li key={bot.id}>
+            <h2>{bot.name}</h2>
+            <img src={bot.avatar_url} alt={bot.name} />
+            <p>{bot.health}</p>
+            <p>{bot.damage}</p>
+            <p>{bot.armor}</p>
+            <p>{bot.bot_class}</p>
+            <p>{bot.created_at}</p>
+            <p>{bot.updated_at}</p>
+            <button onClick={() => onReleaseBot(bot)}>Release from Army</button>
+            <button onClick={() => onDischargeBot(bot)}>Discharge from Service</button>
+          </li>
+        ))}
+      </ul>
     </div>
-  )
+  );
 }
 
-export default YourBotArmy
+export default YourBotArmy;
