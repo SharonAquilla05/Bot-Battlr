@@ -51,8 +51,8 @@ function App() {
         <option value="damage">Sort by Damage</option>
         <option value="armor">Sort by Armor</option>
       </select>
-      <BotCollection bots={sortedBots} onAddBot={handleAddBot} />
       <YourBotArmy bots={botArmy} onReleaseBot={handleReleaseBot} onDischargeBot={handleDischargeBot} />
+      <BotCollection bots={sortedBots} onAddBot={handleAddBot} />
     </div>
   );
 }

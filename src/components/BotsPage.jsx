@@ -4,10 +4,9 @@ import BotCollection from "./BotCollection";
 import './App.css';
 
 function BotsPage() {
-  //start here with your code for step one
 
   return (
-    <div>
+    <div className="Main-page">
       <YourBotArmy />
       <BotCollection />
     </div>

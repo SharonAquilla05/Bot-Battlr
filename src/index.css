@@ -5,12 +5,15 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: aliceblue;
+  display:inline-block;
+  
+  
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  
 }
 
 a {
@@ -65,4 +68,32 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  /* Adjust as needed */
+  grid-gap: 10px; }
+
+.image-grid img {
+  width: 100%;  
+  height: auto;  
+}
+.your-bot-army-title{
+  font-size: larger;
+  color: aqua;
+
+}
+
+.bot-collection{
+  color: #000;
+  border:2px solid grey;
+  border: bottom 20px;;
+  padding:10px;
+  border-radius: 10px;
+  background-color: greenyellow;
+
+}
+.your-bot-army-title{
+  border: 2px;
+  padding:10px;
 }

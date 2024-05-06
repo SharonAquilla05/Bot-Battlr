@@ -1,8 +1,9 @@
 import React from "react";
 
 function BotCollection({ onAddBot, bots }) {
+
   return (
-    <div>
+    <div className="bot-collection">
       <h1>My Bot Collection</h1>
       <ul>
         {bots.map((bot) => (

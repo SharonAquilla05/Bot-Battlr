@@ -2,8 +2,8 @@ import React from "react";
 
 function YourBotArmy({ bots, onReleaseBot, onDischargeBot }) {
   return (
-    <div>
-      <h2>Your Bot Army</h2>
+    <div className="your-bot-army-title">
+      <h1>Your Bot Army</h1>
       <ul>
         {bots.map((bot) => (
           <li key={bot.id}>
